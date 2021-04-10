@@ -10,15 +10,12 @@
  * Strings have 3 common characters - 2 "a"s and 1 "c".
  */
 function getCommonCharacterCount(s1, s2) {
-  const a1 = s1.split('');
-  const a2 = s2.split('');
-
-  const obj1 = a1.reduce((acc, item) => {
+  const obj1 = s1.split('').reduce((acc, item) => {
     acc[item] = acc.hasOwnProperty.call(acc, item) ? acc[item] + 1 : 1;
     return acc;
   }, {});
 
-  const obj2 = a2.reduce((acc, item) => {
+  const obj2 = s2.split('').reduce((acc, item) => {
     acc[item] = acc.hasOwnProperty.call(acc, item) ? acc[item] + 1 : 1;
     return acc;
   }, {});
